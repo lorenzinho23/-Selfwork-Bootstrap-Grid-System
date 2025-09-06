@@ -15,6 +15,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
     <link href="blog_style.css" rel="stylesheet" />
+    <script src="blog_script.js" defer></script>
   </head>
   <body>
     <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
@@ -133,8 +134,40 @@
           <input type="checkbox" class="form-check-input" id="exampleCheck1" />
           <label class="form-check-label" for="exampleCheck1">Ricordami</label>
         </div>
-        <button type="submit" class="btn btn-primary">Invia</button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Invia
+        </button>
       </form>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Form inviato correttamente.
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">Grazie per averci contattato.</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer>
